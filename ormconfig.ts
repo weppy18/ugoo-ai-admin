@@ -1,13 +1,13 @@
-// ormconfig.ts
 import { DataSourceOptions } from 'typeorm';
+import 'dotenv/config';
 
 const config: DataSourceOptions = {
   type: 'mysql',
-  host: 'localhost',
-  port: 3306,
-  username: 'root',
-  password: '123456',
-  database: 'yourDatabase',
+  host: process.env.DB_HOST,
+  port: parseInt(process.env.DB_PORT || '3306'),
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
   entities: [
     'src/domain/entities/**/*.ts'
   ],
