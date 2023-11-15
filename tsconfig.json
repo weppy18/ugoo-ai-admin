@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"target": "es2018", // Set the JavaScript version for output (es2018 is commonly used for Node.js)
+		"module": "commonjs", // CommonJS is the standard for Node.js
+		"outDir": "./dist", // Redirect output structure to the directory
+		"rootDir": "./src", // Specify the root directory of input files
+		"strict": true, // Enable all strict type-checking options
+		"esModuleInterop": true, // Enables compatibility with CommonJS modules
+		"skipLibCheck": true // Skip type checking of declaration files
+	},
+	"include": [
+		"src/**/*" // Include all files in the src directory
+	],
+	"exclude": [
+		"node_modules", // Exclude the node_modules directory
+	]
+}
